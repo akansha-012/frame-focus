@@ -1,0 +1,332 @@
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    line-height: 1.6;
+}
+
+/* NAVIGATION BAR */
+
+header {
+    background-color: #080808;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    font-size: 27px;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #d6ad60;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #d6ad60;
+}
+
+/* HOME SECTION */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+    url("https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1600");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.tagline {
+    color: #d6ad60;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+    background-color: #d6ad60;
+    color: #111;
+    padding: 12px 28px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+/* COMMON SECTION STYLING */
+
+section {
+    padding: 80px 8%;
+    scroll-margin-top: 75px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    color: #d6ad60;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+/* ABOUT SECTION */
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.about-container img {
+    width: 45%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* GALLERY SECTION */
+
+.gallery {
+    background-color: #191919;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.gallery-item {
+    background-color: #222;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item h3 {
+    margin-top: 12px;
+    color: #d6ad60;
+}
+
+/* SERVICES SECTION */
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.service-box {
+    background-color: #202020;
+    padding: 35px;
+    text-align: center;
+    border: 1px solid #383838;
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    border-color: #d6ad60;
+    transform: translateY(-5px);
+}
+
+.service-box h3 {
+    color: #d6ad60;
+    margin-bottom: 15px;
+}
+
+.service-box p {
+    color: #ccc;
+}
+
+/* CONTACT SECTION */
+
+.contact {
+    background-color: #191919;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    background-color: #252525;
+    border: 1px solid #444;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #d6ad60;
+}
+
+.contact-form button {
+    align-self: flex-start;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #080808;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+footer h3 {
+    color: #d6ad60;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aaa;
+    margin: 5px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-container img {
+        width: 100%;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
